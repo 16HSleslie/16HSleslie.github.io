@@ -5,22 +5,37 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="/style.css">
     </head>
     <body>
         <nav>
             <div class="navbar-content">
                 <div class="navbar-links">
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="/pages/game.html">Game</a></li>
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="#">Game</a></li>
                         <li><a href="#">Info</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
-        <div class="random atm">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, pariatur necessitatibus est alias nam mollitia id, quo minima labore veniam doloribus rerum. Optio eum, consequatur libero fugiat animi ratione ducimus!</p>
+        <div class="main-game-content">
+            <div class="center-box">
+                <div class="inner-info">
+                    <div class="image-box">
+                        <img id="albumCover" class="album-cover" src="">
+                    </div>
+                    <div class="sound-box">
+                        <audio id="audioSound" controls></audio>
+                    </div>
+                    <div class="input-box centered">
+                        <input type="text" name="textBox" id="guessInputBox" placeholder="Answer">
+                    </div>
+                    <div class="submit-box centered">
+                        <button onclick="guessingGame()" type="button" id="guessSubmitButton">Submit</button>
+                    </div>
+                </div>
+            </div>
         </div>
         <footer>
             <div class="footer-content">
@@ -39,6 +54,6 @@
                 </div>  
             </div>
         </footer>
-        <script src="script.js" async defer></script>
+        <script src="/script.js" async defer></script>
     </body>
 </html>
