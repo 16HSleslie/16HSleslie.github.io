@@ -66,10 +66,6 @@ function changeSong() {
   albumCover.src = songs[songChoice].albumCover;
 };
 
-function removeVisibility() {
-  answerPicture.src = "hidden";
-};
-
 function guessingGame() {
   let input = document.getElementById("guessInputBox").value;
   input = input.toLowerCase();
