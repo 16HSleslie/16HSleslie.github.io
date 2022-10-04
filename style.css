@@ -1,0 +1,145 @@
+.navbar-content ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #E1CDB0;
+}
+
+.navbar-content li {
+    float: left;
+}
+
+.navbar-content li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar-content li a:hover {
+    background-color: #111;
+}
+
+.main-game-content {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #DBD8CA;
+}
+
+.centered {
+    text-align: center;
+}
+
+.center-box {
+    width: 400px;
+    height: 750px;
+    background: #CAD5DB;
+}
+
+.image-box {
+    margin: auto;
+    width: 75%;
+    padding: 10px;
+    padding-top: 75px;
+}
+
+.album-cover {
+    width: 300px;
+    height: auto;
+}
+
+.sound-box {
+    margin: auto;
+    width: 75%;
+    padding: 10px;
+}
+
+.input-box {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    padding-top: 75px;
+}
+
+.submit-box {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+    color: #cacdd2;
+}
+
+.footer-bottom{
+    background: #000;
+    padding: 20px;
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+.footer-bottom p{
+    float: left;
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.footer-joke {
+    float: right;
+    color: #cfd2d6;
+}
+
+input[type=text] {
+    padding: 5px;
+    margin-bottom: 30px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #eee;
+    outline: none;
+}
+
+input::placeholder {
+    color: #eee;
+}
+
+button{
+    width: 200px;
+    height: 60px;
+    border: none;
+    outline: none;
+    background: #CADBD0;
+    color: #FFFFFF;
+    font-size: 22px;
+    border-radius: 40px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+footer {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #111;
+    height: auto;
+    padding-top: 40px;
+    color: #fff;
+}
