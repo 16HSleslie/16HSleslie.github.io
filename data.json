@@ -1,0 +1,38 @@
+[
+  {
+    "song_name": "Alcoholic",
+    "release_date": "1/05/2012",
+    "album": "Home Brew",
+    "photo_path": "/pictures/home-brew.jpg",
+    "song_path": "/songs/homebrewski-alcoholic.mp3"
+  },
+  {
+    "song_name": "Listen to Us",
+    "release_date": "1/05/2012",
+    "album": "Home Brew",
+    "photo_path": "/pictures/home-brew.jpg",
+    "song_path": "/songs/homebrewski-listenToUs.mp3"
+  },
+  {
+    "song_name": "State of Mind",
+    "release_date": "1/05/2012",
+    "album": "Home Brew",
+    "photo_path": "/pictures/home-brew.jpg",
+    "song_path": "/songs/homebrewski-stateOfMind.mp3"
+  },
+  {
+    "song_name": "Blowing Smoke",
+    "release_date": "23/07/2018",
+    "album": "B-Sides and Rarities",
+    "photo_path": "/pictures/b-sides.jpg",
+    "song_path": "/songs/homebrewski-blowingSmoke.mp3"
+  },
+  {
+    "song_name": "Sunday",
+    "release_date": "6/11/2008",
+    "album": "Last Week",
+    "photo_path": "/pictures/last-week.jpg",
+    "song_path": "/songs/homebrewski-sunday.mp3"
+  }
+  
+]
