@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="/style.css">
     </head>
-    <body>
+    <body onload="onPageLoad()">
         <nav>
             <div class="navbar-content">
                 <div class="navbar-links">
@@ -37,7 +37,7 @@
                             <input type="text" name="textBox" id="guessInputBox" placeholder="Answer">
                         </div>
                         <div class="submit-box centered">
-                            <button onclick="guessingGame()" type="button" id="guessSubmitButton">Submit</button>
+                            <button onclick="changeSong()" type="button" id="guessSubmitButton">Submit</button>
                         </div>
                     </div>
                 </div>
