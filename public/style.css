@@ -106,6 +106,37 @@
     color: #cfd2d6;
 }
 
+.song-info-box {
+    background-color: grey;
+    width: 350px;
+    height: 600px;
+    border-radius: 10px;
+}
+
+.song-album-iamge {
+    width: 350px;
+    height: auto;
+
+}
+
+.homePage-responsive-divs {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.homePage-content {
+    flex: 33%;
+    padding: 20px;
+    text-align: center;
+    background-color: grey;
+}
+
+@media screen and (max-width: 600px) {
+    .homePage-responsive-divs {
+        flex-direction: column;
+    }
+}
+
 input[type=text] {
     padding: 5px;
     margin-bottom: 30px;

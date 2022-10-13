@@ -8,7 +8,6 @@ const getFact = async () => {
         const response = await fetch(endpoint, {cache: 'no-cache'});
         if (response.ok) {
             jsonResponse = await response.json();
-            console.log(jsonResponse);
         }
     } catch(error) {
         console.log(error);
@@ -36,7 +35,7 @@ const apiRequest = async () => {
     const response = await fetch(endpoint, {cache: 'no-cache'});
     if (response.ok) {
       jsonResponse = await response.json();
-      console.log(jsonResponse);
+	  console.log(jsonResponse);
     }
   } catch(error) {
     console.log(error);
@@ -48,7 +47,6 @@ const apiRequest = async () => {
 
 const getSongData = async () => {
   let songData = await apiRequest();
-  console.log(songData);
   return songData;
 };
 
@@ -94,3 +92,17 @@ const guessingGame = async (songName, abortCont) => {
   }
 };
 
+/*
+<div class="song-info-box">
+	<div class="song-album-image">
+		<img src="/pictures/b-sides.jpg" style="width: 350px; height: auto; border-radius: 10px;">
+	</div>
+	<div class="song-data">
+		<h3 id="songName"></h3>
+		<h3 id="songAlbum"></h3>
+		<h3 id="songReleaseDate"></h3>
+		<h3 id="songLegnth"></h3>
+	</div>
+</div>
+
+*/ 
