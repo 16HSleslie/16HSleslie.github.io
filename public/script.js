@@ -8,7 +8,6 @@ const getFact = async () => {
         const response = await fetch(endpoint, {cache: 'no-cache'});
         if (response.ok) {
             jsonResponse = await response.json();
-            console.log(jsonResponse);
         }
     } catch(error) {
         console.log(error);
@@ -36,7 +35,7 @@ const apiRequest = async () => {
     const response = await fetch(endpoint, {cache: 'no-cache'});
     if (response.ok) {
       jsonResponse = await response.json();
-      console.log(jsonResponse);
+	  console.log(jsonResponse);
     }
   } catch(error) {
     console.log(error);
@@ -48,7 +47,6 @@ const apiRequest = async () => {
 
 const getSongData = async () => {
   let songData = await apiRequest();
-  console.log(songData);
   return songData;
 };
 
@@ -67,40 +65,44 @@ const onPageLoad = async () => {
   audioSound.load();
   albumCover.src = randomSong.photo_path;
   //An event listener for the submit button to run the guessing game function.
-  submitButton.addEventListener("click", function () {
-    guessingGame(randomSong.song_name);
-});
+  const abortCont = new AbortController(); // Create the AbortController
+  submitButton.addEventListener("click", () => {
+    guessingGame(randomSong.song_name, abortCont);
+  }, { signal: abortCont.signal }); // Pass the AbortController in
 };
 
 //async function for when the button is clicked to check the answer in the input box to the json data.
-const guessingGame = async (songPath) => {
+const guessingGame = async (songName, abortCont) => {
   //get the value of the input box
   let input = document.getElementById("guessInputBox").value;
   //check if the value of the input box matches the song path in the json data
   if (input) {
-    if (input.toLowerCase() === songPath.toLowerCase()) {
-        alert('correct')
+    if (input.toLowerCase() === songName.toLowerCase()) {
+        alert('correct');
         score++;
         alert("that took " + score + " attempts");
         score = 0;
-        changeSong();
+        abortCont.abort(); // Remove the event listener
+        onPageLoad();
     } else {
-        alert('incorrect')
-        alert(songPath);
+        alert('incorrect');
+        alert(songName);
         score++;
-    };
-  };
+    }
+  }
 };
 
-//need to  change this to an async function once figured out how to store data.
-const changeSong = async () => {
-  let songResults = await getSongData();
-  let randomSong = songResults[Math.floor(Math.random() * songResults.length)];
-  audioSound.src = randomSong.song_path;
-  audioSound.load();
-  albumCover.src = randomSong.photo_path;
-  submitButoon.addEventListener("click", () => {
-    guessingGame(randomSong.song_name);
-  });
-};
+/*
+<div class="song-info-box">
+	<div class="song-album-image">
+		<img src="/pictures/b-sides.jpg" style="width: 350px; height: auto; border-radius: 10px;">
+	</div>
+	<div class="song-data">
+		<h3 id="songName"></h3>
+		<h3 id="songAlbum"></h3>
+		<h3 id="songReleaseDate"></h3>
+		<h3 id="songLegnth"></h3>
+	</div>
+</div>
 
+*/ 

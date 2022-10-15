@@ -27,7 +27,18 @@ app.get('/game.html', (req, res) => {
     } else {
       console.log('Sent: index.html');
     }
-  });
+  })
+});
+
+app.get('/songs.html', (req, res) => {
+  const route = path.join(__dirname, '/pages/songs.html');
+  res.sendFile(route, (err) => {
+    if (err) {
+      console.log(err);
+    } else {
+      console.log('Sent: songs.html');
+    }
+  })
 });
 
 app.get('/getSongs', (req, res) => {

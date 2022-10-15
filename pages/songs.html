@@ -2,7 +2,8 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Home Brew</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
@@ -12,26 +13,24 @@
             <div class="navbar-content">
                 <div class="navbar-links">
                     <ul>
-                        <li><a href="#">Home</a></li>
+                        <li><a href="/">Home</a></li>
                         <li><a href="/game.html">Game</a></li>
-                        <li><a href="/songs.html">Songs</a></li>
+                        <li><a href="#">Songs</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
-        <main>
-            <div class="homePage-main-container">
-                <div class="homePage-responsive-divs">
-                    <div class="homePage-content">
-                        <h1>Home Brew</h1>
-                        <div class="homePage-img">
-                            <img src="" alt="">
-                        </div>
-                    </div>
-                    <div class="homePage-content">
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum quasi esse doloremque repellendus quisquam molestias corporis ea optio id et sequi officia ex, at, pariatur aliquid suscipit in. Voluptatem, consectetur.</p>
-                    </div>
-                </div>  
+        <main id="songPage-content">
+            <div class="song-info-box">
+                <div class="song-album-image">
+                    <img src="/pictures/b-sides.jpg" style="width: 350px; height: auto; border-radius: 10px;">
+                </div>
+                <div class="song-data">
+                    <h3 id="songName"></h3>
+                    <h3 id="songAlbum"></h3>
+                    <h3 id="songReleaseDate"></h3>
+                    <h3 id="songLegnth"></h3>
+                </div>
             </div>
         </main>
         <footer>
@@ -51,6 +50,7 @@
                 </div>  
             </div>
         </footer>
+        <script src="songPage.js" async defer></script>
         <script src="script.js" async defer></script>
     </body>
 </html>
