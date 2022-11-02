@@ -20,18 +20,20 @@
                 </div>
             </div>
         </nav>
-        <main id="songPage-content">
-            <div class="song-info-box">
+        <main id="songPage-content" id="songBox">
+            <div class="song-info-sd" id="songBox"></div>
+            <script id="blockOfStuff" type="text/html">
                 <div class="song-album-image">
                     <img src="/pictures/b-sides.jpg" style="width: 350px; height: auto; border-radius: 10px;">
                 </div>
-                <div class="song-data">
-                    <h3 id="songName"></h3>
-                    <h3 id="songAlbum"></h3>
-                    <h3 id="songReleaseDate"></h3>
-                    <h3 id="songLegnth"></h3>
+                <div class="song-data" id="songData">
+                    <b>Song Name:</b> {SONG}<br>
+                    <b>Album:</b> {ALBUM}<br>
+                    <b>Release:</b> {RELEASE}
                 </div>
-            </div>
+            </script>
+            
+            <div id="targetElement" class="red"></div>
         </main>
         <footer>
             <div class="footer-content">
@@ -41,7 +43,6 @@
                     the band and a guessing game. This website was created for my second web develpmont assessment for my level 4 certification
                     in information technology essentials.
                 </p>
-
             </div>
             <div class="footer-bottom">
                 <p>copyright &copy;2022 Harry Stanley</p>
@@ -50,7 +51,6 @@
                 </div>  
             </div>
         </footer>
-        <script src="songPage.js" async defer></script>
-        <script src="script.js" async defer></script>
+        <script src="songPage.js" type="module" async defer></script>
     </body>
 </html>
