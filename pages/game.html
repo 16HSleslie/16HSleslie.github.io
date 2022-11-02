@@ -25,7 +25,9 @@
                     <h1>Guess the Homebrew song.</h1>
                 </div>
                 <div class="center-box">
-                    <div class="inner-info">
+                    <div class="inner-info hidden" id="gameContainer">
+                        <div class="timer" id="timer">
+                        </div>
                         <div class="image-box">
                             <img id="albumCover" class="album-cover" src="">
                         </div>
@@ -40,6 +42,24 @@
                             <button onclick="changeSong()" type="button" id="guessSubmitButton">Submit</button>
                         </div>
                     </div>
+                    <div class="start-game">
+                        <button onclick="startGame()" type="button" id="startButton">Start Game</button>
+                        <button onclick="showHighScore()" type="button" id="highScore">High Score</button>
+                    </div>
+                    <div class="sumbit-score hidden" id="submitScore" onsubmit="return checkBeforeSubmit()">
+                        <form action="/sendData" method="post">
+                            <input type="text" class="name-box" name="name" id="name" placeholder="Name"><br><br>
+                            <input type="text" name="time" id="timeInput" readonly><br>
+                            <input type="submit" value="Submit" required>
+                        </form>
+                    </div>
+                </div>
+                <div class="high-score-content hidden" id="highScoreContainer">
+                    <div onclick="closeHighScore()" class="high-score-box">
+                        <div class="exit-button">
+                            <h2 class="exit-text centered">X</h2>
+                        </div>
+                    </div>
                 </div>
             </div>
         </main>
@@ -51,7 +71,6 @@
                     the band and a guessing game. This website was created for my second web develpmont assessment for my level 4 certification
                     in information technology essentials.
                 </p>
-
             </div>
             <div class="footer-bottom">
                 <p>copyright &copy;2022 Harry Stanley</p>
@@ -60,6 +79,16 @@
                 </div>  
             </div>
         </footer>
-        <script src="/script.js" async defer></script>
+        <script src="/script.js" async></script>
+        <script type="text/javascript">
+            var wasSubmitted = false;    
+            function checkBeforeSubmit() {
+                if(!wasSubmitted) {
+                    wasSubmitted = true;
+                    return wasSubmitted;
+                }
+                return false;
+            }   
+        </script>
     </body>
 </html>

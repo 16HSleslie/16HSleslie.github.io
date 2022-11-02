@@ -1,9 +1,57 @@
+@font-face {
+    font-family: 'AtttackGraffiti';
+    src: url(fonts/aAttackGraffiti.ttf);
+}
+
+form input {
+    font: 16px/26px "Raleway", sans-serif; 
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    font-family: inherit;
+    padding: .8em 0 10px .8em;
+    margin-left: 50px;
+    border: 1px solid #CFCFCF;
+    outline: 0;
+    display: inline-block;
+    width: 75%;
+}
+
+input::placeholder {
+    color: #000 ;
+}
+
+button{
+    width: 200px;
+    height: 60px;
+    border: none;
+    outline: none;
+    background: #f0bf01;
+    color: #FFFFFF;
+    font-size: 22px;
+    border-radius: 40px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+footer {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #111;
+    height: auto;
+    padding-top: 40px;
+    color: #fff;
+}
+
 .navbar-content ul {
+    height: 4vh;
     list-style-type: none;
     margin: 0;
     padding: 0;
-    overflow: hidden;
-    background-color: #E1CDB0;
+    overflow: hidden;   
+    background-color: #342F2F;
 }
 
 .navbar-content li {
@@ -11,10 +59,11 @@
 }
 
 .navbar-content li a {
+    height: 4vh;
     display: block;
     color: white;
     text-align: center;
-    padding: 14px 16px;
+    padding: 16px 16px;
     text-decoration: none;
 }
 
@@ -27,21 +76,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #DBD8CA;
-}
-
-.centered {
-    text-align: center;
+    background-color: #abc4ea   ;
 }
 
 .center-box {
     width: 400px;
     height: 750px;
-    background: #CAD5DB;
+    background: #399566;
+    position: relative;
 }
 
 .image-box {
-    margin: auto;
     width: 75%;
     padding: 10px;
     padding-top: 75px;
@@ -53,7 +98,6 @@
 }
 
 .sound-box {
-    margin: auto;
     width: 75%;
     padding: 10px;
 }
@@ -65,10 +109,21 @@
     padding-top: 75px;
 }
 
+.input-box input {
+    font: 16px/26px "Raleway", sans-serif; 
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    font-family: inherit;
+    padding: .8em 0 10px .8em;
+    border: 1px solid #CFCFCF;
+    outline: 0;
+    display: inline-block;
+    width: 100%;
+}
+
 .submit-box {
-    margin: auto;
+    margin-left: 60px;
     width: 50%;
-    padding: 10px;
 }
 
 .footer-content {
@@ -113,12 +168,6 @@
     border-radius: 10px;
 }
 
-.song-album-iamge {
-    width: 350px;
-    height: auto;
-
-}
-
 .homePage-responsive-divs {
     display: flex;
     flex-wrap: wrap;
@@ -128,7 +177,129 @@
     flex: 33%;
     padding: 20px;
     text-align: center;
-    background-color: grey;
+    background-image: linear-gradient(180deg, #CEBADD, #DDBADB);
+}
+
+.homePage-content h1 {
+    margin-top: 2em;
+    font-family: "AtttackGraffiti", sans-serif;
+    font-size: 6em;
+}
+
+.homePage-img {
+    margin-bottom: 5vw;
+}
+
+.inner-info {
+    position: absolute;
+    left: 42px;
+}
+
+
+.start-game {
+    position: absolute;
+    top: 35%;
+    left: 25%;
+}
+
+.start-game button {
+    margin-top: 50px;
+}
+
+.timer {
+    position: absolute;
+    top: 25px;
+    left: 125px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    color: white;    
+}
+
+.submit-score {
+    position: absolute;
+}
+
+.centered {
+    text-align: center;
+}
+
+.high-score-content {
+    position: absolute;
+}
+
+.high-score-content {
+    width: 55%;
+    height: 65%;
+    background-color: #eaccd4;
+}
+
+.indivdiual-responsive-divs {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.indivdiual-members {
+    flex: 33%;
+    text-align: center;
+    height: 80vh;
+}
+
+.indivdiual-members-middle {
+    flex: 33%;
+    text-align: center;
+    position: relative;
+    height: 80vh;
+}
+
+.indivdiual-members img {
+    margin-top: 2vh;
+}
+
+.indivdiual-members p {
+    margin-top: 8vh;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.2em;
+}
+
+.indivdiual-members h3 {
+    margin-top: 20vh;
+    font-size: 2em;   
+}
+
+.indivdiual-members-middle img {
+    position: absolute;
+    left: 8vh;
+    bottom: 8vh; 
+}
+
+.indivdiual-members-middle p {
+    position: absolute;
+    bottom: 35vh;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.2em;
+}
+
+.indivdiual-members-middle h3 {
+    position: absolute;
+    bottom: 0vh;
+    left: 8.7vh;
+    font-size: 2em;
+}
+
+.exit-button {
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    top: 2%;
+    right: 2%;
+    background-color: #FFFFFF;
+}
+
+
+.hidden {
+    visibility: hidden;
 }
 
 @media screen and (max-width: 600px) {
@@ -137,40 +308,8 @@
     }
 }
 
-input[type=text] {
-    padding: 5px;
-    margin-bottom: 30px;
-    background: transparent;
-    border: none;
-    border-bottom: 1px solid #eee;
-    outline: none;
-}
-
-input::placeholder {
-    color: #eee;
-}
-
-button{
-    width: 200px;
-    height: 60px;
-    border: none;
-    outline: none;
-    background: #CADBD0;
-    color: #FFFFFF;
-    font-size: 22px;
-    border-radius: 40px;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-}
-
-footer {
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: #111;
-    height: auto;
-    padding-top: 40px;
-    color: #fff;
+@media screen and (max-width: 900px) {
+    .indivdiual-responsive-divs {
+        flex-direction: column;
+    }
 }
